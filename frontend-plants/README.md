@@ -1,5 +1,3 @@
-# plants-frontend
-
 What features are required for your minimum viable product?
 
 Landing Page, Login/Registration Forms, authenticated users can add, update, or delete a plant. Logout function to remove token and route user back to home page.
