@@ -8,10 +8,12 @@ import Signup from './components/Signup';
 function App() {
   return (
     <div className="App">
+      
       Water Plants App
       {/* <button onClick={()=>}</button> */}
       <Login />
       <Signup />
+      
     </div>
   );
 }
