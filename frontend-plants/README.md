@@ -13,5 +13,11 @@ UNIT 3 CHECKLIST
 
 Login authentication with token
 Registration authentication with token
-Built out axiosWithAuth
+Edit, Delete API have been built out through the dummy API
+Built out axiosWithAuth with dummy API
 Built out a PrivateRoute page.
+
+NEED TO DO:
+Build the store
+Reducers/Actions
+ROUTING
