@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
+
     export default function LoginForm() {
         const initialValues = {user_name: "", password: ""}
         const [logincreds, setLoginCreds] = useState(initialValues)
@@ -39,7 +40,7 @@ return (
               required/>
         </label>
               <br/>
-            <CustomButton>Submit</CustomButton>
+            <button>Submit</button>
         </form>
       </div>
     )
