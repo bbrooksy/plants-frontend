@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 const schema= yup.object().shape({
     name: yup.string().required('name is required!').min(3, 'name needs to be at least 3 letters long'),
     password: yup.string().required('password is required').min(6, 'password must be at least 6 characters long'),
-    email: yup.string().email('invalid email').required('valid email address required'),
+    phone: yup.string().email('invalid phone number').required('valid phone number required'),
     tos: yup.boolean().oneOf([true], 'you must agree to the terms of service to continue'),
    })
    
@@ -49,7 +49,7 @@ const schema= yup.object().shape({
     return (
         <div className='form-inputs'>
         <div className='error-msg'style={{ color: 'red'}}>
-           <div>{errors.name}</div>
+           <div>{errors.username}</div>
            <div>{errors.phone}</div>
            <div>{errors.password}</div>
            <div>{errors.tos}</div>  
@@ -59,7 +59,7 @@ const schema= yup.object().shape({
           <label>Username
               <input 
               onChange={change}
-              value={form.name}
+              value={form.username}
               name='name' 
               type='text'
               placeholder='Enter Username'
@@ -69,7 +69,7 @@ const schema= yup.object().shape({
           <label>Phone Number
               <input 
               onChange={change}
-              value={form.phoneNumb}
+              value={form.phone}
               name='email' 
               type='text'
               placeholder='Phone Number'
