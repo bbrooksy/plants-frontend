@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 
 const schema= yup.object().shape({
-    name: yup.string().required('name is required!').min(3, 'name needs to be at least 3 letters long'),
+    username: yup.string().required('Username is required!').min(3, 'name needs to be at least 3 letters long'),
     password: yup.string().required('password is required').min(6, 'password must be at least 6 characters long'),
     phone: yup.string().email('invalid phone number').required('valid phone number required'),
     tos: yup.boolean().oneOf([true], 'you must agree to the terms of service to continue'),
@@ -65,17 +65,17 @@ const schema= yup.object().shape({
               placeholder='Enter Username'
               maxLength='35'/>
           </label>
-  
+            <br/>
           <label>Phone Number
               <input 
               onChange={change}
               value={form.phone}
-              name='email' 
-              type='text'
+              name='phone-number' 
+              type='tel'
               placeholder='Phone Number'
-              maxLength='40'/>
+              maxLength='15'/>
           </label>
-  
+            <br/>
           <label>Password
               <input 
               onChange={change}
@@ -84,7 +84,7 @@ const schema= yup.object().shape({
               type='text'
               placeholder='Create Password'/>
           </label>
-  
+            <br/>
           <label>Terms of Service
               <input 
               onChange={change}
@@ -93,7 +93,7 @@ const schema= yup.object().shape({
               type='checkbox'
               placeholder='Your are required to read and agree to the following terms of service'/>
           </label>
-  
+        <br/>
           
               <button disabled={disabled}>Submit</button>
     
